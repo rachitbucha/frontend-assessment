@@ -1,0 +1,5 @@
+::ng-deep body{background-color:#EFEFEF}
+.material-icons{float:right;font-size:50px;color:#ADAAAD;cursor:pointer}
+.student-card-on-expand{text-align:center;width:72%}
+.tags{display:flex}
+.tag{background:#ADAAAD;padding:10px;border:1px solid #ADAAAD;border-radius:8px;margin-left:5px}
