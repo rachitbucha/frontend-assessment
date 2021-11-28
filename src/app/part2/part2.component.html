@@ -1,0 +1,14 @@
+<div class="student-card">
+    <div *ngFor="let student of studentInfo" class="student-card-child">
+        <div class="student-image-parent w-15">
+            <img class="student-image" src="{{student.pic}}" alt="{{student.firstName}}">
+        </div>
+        <div class="w-50">
+            <h1>{{student.firstName + ' ' + student.lastName}}</h1>
+            <p>Email: {{student.email}}</p>
+            <p>Company: {{student.company}}</p>
+            <p>Skill: {{student.skill}}</p>
+            <p>Average: {{getStudentGradeAverage(student.grades)+'%'}}</p>
+        </div>
+    </div>
+</div>

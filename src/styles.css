@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;600&display=swap');
+*{font-family:'Raleway', sans-serif}
+.student-card{border:1px solid #ADAAAD;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;overflow-y:scroll;height:80vh;width:50vw;background-color:#FFFFFF}
+.student-card-child{display:flex;justify-content:center;align-items:center;border-bottom:1px solid #ADAAAD}
+.student-image{display:block;border-radius:200px;box-sizing:border-box;border:1px solid #ADAAAD;height:100px;width:100px}
+.w-50{width:50%}
+.w-15{width:15%}
