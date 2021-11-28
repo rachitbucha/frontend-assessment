@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { Part4Component } from './part4/part4.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Part1Component,
     Part2Component,
-    Part3Component
+    Part3Component,
+    Part4Component
   ],
   imports: [
     BrowserModule,

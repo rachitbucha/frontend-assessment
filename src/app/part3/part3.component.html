@@ -4,7 +4,7 @@
             <input matInput placeholder="Search by name" [(ngModel)]="searchTerm" (ngModelChange)="searchName()">
         </mat-form-field>
     </div>
-    <div *ngFor="let student of studentInfo" class="student-card-child">
+    <div *ngFor="let student of studentInfo" class="student-card-child card-border-bottom">
         <div class="student-image-parent w-15">
             <img class="student-image" src="{{student.pic}}" alt="{{student.firstName}}">
         </div>
