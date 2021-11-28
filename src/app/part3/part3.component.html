@@ -1,4 +1,9 @@
 <div class="student-card">
+    <div>
+        <mat-form-field class="w-100" appearance="fill">
+            <input matInput placeholder="Search by name" [(ngModel)]="searchTerm" (ngModelChange)="searchName()">
+        </mat-form-field>
+    </div>
     <div *ngFor="let student of studentInfo" class="student-card-child">
         <div class="student-image-parent w-15">
             <img class="student-image" src="{{student.pic}}" alt="{{student.firstName}}">

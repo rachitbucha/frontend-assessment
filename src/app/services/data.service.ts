@@ -9,8 +9,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getUserData(): Observable<any> {
-    return this.http.get('https://api.hatchways.io/assessment/students');
+  getUserData(): Promise<any> {
+    return this.http.get('https://api.hatchways.io/assessment/students').toPromise();
   }
 
 }
