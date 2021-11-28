@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-part2',
@@ -8,12 +8,8 @@ import { DataService } from '../services/data.service';
 })
 export class Part2Component {
   studentInfo: any;
-  constructor(private dataService: DataService) {
-    this.dataService.getUserData().subscribe((response) => this.studentInfo = response.students);
-  }
-
-  getStudentGradeAverage(gradeArray: Array<any>): number {
-    return (gradeArray.reduce((a, b) => (Number(a) + Number(b))) / gradeArray.length);
+  constructor(public commonService: CommonService) {
+    (async () => this.studentInfo = await this.commonService.getUserData())();
   }
 
 }
