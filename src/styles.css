@@ -9,3 +9,4 @@ body{margin:0}
 .w-50{width:50%}
 .w-15{width:15%}
 .card-border-bottom{border-bottom:1px solid #ADAAAD}
+.mat-form-field-appearance-fill .mat-form-field-flex{background-color:white}
