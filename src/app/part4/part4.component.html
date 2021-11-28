@@ -1,0 +1,32 @@
+<div class="student-card">
+    <div>
+        <mat-form-field class="w-100" appearance="fill">
+            <input matInput placeholder="Search by name" [(ngModel)]="searchTerm" (ngModelChange)="searchName()">
+        </mat-form-field>
+    </div>
+    <div *ngFor="let student of studentInfo" class="card-border-bottom">
+        <div class="student-card-child">
+            <div class="student-image-parent w-15">
+                <img class="student-image" src="{{student.pic}}" alt="{{student.firstName}}">
+            </div>
+            <div class="w-50">
+                <h1>{{student.firstName + ' ' + student.lastName}}
+                    <span
+                        (click)="showGrades.has(student.id) ? showGrades.delete(student.id) : showGrades.add(student.id)"
+                        class="material-icons">
+                        {{showGrades.has(student.id) ? 'remove' : 'add'}}
+                    </span>
+                </h1>
+                <p>Email: {{student.email}}</p>
+                <p>Company: {{student.company}}</p>
+                <p>Skill: {{student.skill}}</p>
+                <p>Average: {{commonService.getStudentGradeAverage(student.grades)+'%'}}</p>
+            </div>
+        </div>
+        <div class="student-card-on-expand" *ngIf="showGrades.has(student.id)">
+            <p *ngFor="let grade of student.grades; let i = index">
+                Test {{i+1}}: {{grade+"%"}}
+            </p>
+        </div>
+    </div>
+</div>
